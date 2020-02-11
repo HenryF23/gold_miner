@@ -10,7 +10,7 @@ class Mines_ManagerTest {
 
         mines_manager.display2DArray();
         System.out.println("----------------------------------------------");
-        mines_manager.checkMineAndReturnNewMine(3,1);
+        mines_manager.checkAndUpdateMine(3,1);
         mines_manager.display2DArray();
     }
 
