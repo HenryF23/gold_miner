@@ -1,6 +1,5 @@
 package com.example.cmpt276_a3.cmpt276_a3_model;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -8,18 +7,38 @@ public class Mines_Manager {
     private static final Mines_Manager ourInstance = new Mines_Manager();
     private int row;
     private int column;
+    private int numberOfScans;
+    private int numberOfMines;
     private int myMines[][];
 
     public static Mines_Manager getInstance() {
         return ourInstance;
     }
 
-    public void Generate_Mines(int myRow, int myColumn, int numberOfMines){
-        row = myRow;
-        column = myColumn;
-        myMines = new int[row][column];
-        Random random = new Random();
-        int randomMines;
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public int getNumberOfScans() {
+        return numberOfScans;
+    }
+
+    public int getNumberOfMines() {
+        return numberOfMines;
+    }
+
+    public void setMineProperties(int userRow, int userColumn, int userNumberOfMines){
+        row = userRow;
+        column = userColumn;
+        numberOfMines = userNumberOfMines;
+    }
+
+    private void resetMines(){
+        numberOfScans = 0;
 
         // Initialize all elements of 2D array to 0
         for(int i = 0; i < row; i++){
@@ -27,6 +46,14 @@ public class Mines_Manager {
                 myMines[i][j] = 0;
             }
         }
+    }
+
+    public void generateNewMines(){
+        myMines = new int[row][column];
+        Random random = new Random();
+        int randomMines;
+
+        resetMines();
 
         // Random assign mines to the 2D array
         while(numberOfMines > 0){
@@ -39,11 +66,11 @@ public class Mines_Manager {
             }
         }
 
-        Scan_Mines();
+        scanMines();
     }
 
     // -1 = Mine, -2 = Revealed Mine
-    private void Scan_Mines(){
+    private void scanMines(){
         // Populate number of mines to each non-mine cell
         int count;
         for(int i = 0; i < row; i++){
@@ -69,14 +96,14 @@ public class Mines_Manager {
         }
     }
 
-    public void Check_Mine_And_Return_New_Mine(int userRow, int userColumn){
+    public void checkMineAndReturnNewMine(int userRow, int userColumn){
         if(myMines[userRow][userColumn] == -1)
             myMines[userRow][userColumn] = -2;
-        Scan_Mines();
+        scanMines();
     }
 
     // Print 2D array for debug purpose
-    public void Display_2D_Array()
+    public void display2DArray()
     {
         for (int[] row : myMines)
             System.out.println(Arrays.toString(row));
