@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 //        // status bar is hidden, so hide that too if necessary.
 //        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 //        actionBar.hide();
-
     }
 
     @Override
