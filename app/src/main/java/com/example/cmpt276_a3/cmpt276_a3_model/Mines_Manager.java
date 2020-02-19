@@ -69,7 +69,7 @@ public class Mines_Manager {
         scanMines();
     }
 
-    // -1 = Unrevealed Mine, -2 = Revealed Mine
+    // -1 = Mine, -2 = Revealed Mine
     private void scanMines(){
         // Populate number of mines to each non-mine cell
         int count;
@@ -96,7 +96,7 @@ public class Mines_Manager {
         }
     }
 
-    public void checkAndUpdateMine(int userRow, int userColumn){
+    public void checkMineAndReturnNewMine(int userRow, int userColumn){
         if(myMines[userRow][userColumn] == -1)
             myMines[userRow][userColumn] = -2;
         scanMines();
