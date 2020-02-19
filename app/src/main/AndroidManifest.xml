@@ -12,11 +12,15 @@
         <activity
             android:name=".MainGameplayActivity"
             android:label="@string/title_activity_main_gameplay"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
