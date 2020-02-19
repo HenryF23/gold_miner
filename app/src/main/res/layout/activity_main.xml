@@ -9,32 +9,32 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/startButton"
         android:layout_width="104dp"
         android:layout_height="55dp"
         android:layout_marginStart="580dp"
-        android:text="Start"
+        android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.957" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/helpImageButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="340dp"
         android:layout_marginEnd="476dp"
-        android:contentDescription="help"
+        android:contentDescription="@string/help"
         android:src="@drawable/help"
-        app:layout_constraintEnd_toStartOf="@+id/start"
+        app:layout_constraintEnd_toStartOf="@+id/startButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/settingImageButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="23dp"
@@ -43,8 +43,8 @@
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/action_settings"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/start"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/startButton"
+        app:layout_constraintStart_toEndOf="@+id/helpImageButton"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/settings4" />
 

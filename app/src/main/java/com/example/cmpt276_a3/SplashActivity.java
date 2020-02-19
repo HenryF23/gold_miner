@@ -13,7 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-// adapted: https://blog.csdn.net/qq_19681347/article/details/81738350
+//https://blog.csdn.net/qq_19681347/article/details/81738350
 public class SplashActivity extends AppCompatActivity {
 
     private Button go;

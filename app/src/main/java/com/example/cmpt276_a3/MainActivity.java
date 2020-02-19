@@ -13,6 +13,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,15 +30,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
-//
-//        View decorView = getWindow().getDecorView();
-//        // Hide the status bar.
-//        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-//        decorView.setSystemUiVisibility(uiOptions);
-//        // Remember that you should never show the action bar if the
-//        // status bar is hidden, so hide that too if necessary.
-//        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
+
+        ImageButton myButton = findViewById(R.id.helpImageButton);
+        myButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
