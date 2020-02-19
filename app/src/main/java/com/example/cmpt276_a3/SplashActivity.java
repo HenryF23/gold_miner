@@ -1,5 +1,7 @@
 package com.example.cmpt276_a3;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.WindowManager;
@@ -17,6 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     private Button go;
     private int i;
     private Timer timer;
+    @SuppressLint("HandlerLeak")
     private Handler handler = new Handler(){
         public void handleMessage(Message msg){
             switch(msg.what){
