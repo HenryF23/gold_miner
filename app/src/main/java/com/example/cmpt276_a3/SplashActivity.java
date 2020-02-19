@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import java.util.Timer;
 import java.util.TimerTask;
-import android.graphics.Color;
+
 
 // adapted: https://blog.csdn.net/qq_19681347/article/details/81738350
 public class SplashActivity extends AppCompatActivity {
