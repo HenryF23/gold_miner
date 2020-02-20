@@ -9,6 +9,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -47,6 +51,10 @@ public class SplashActivity extends AppCompatActivity {
         getSupportActionBar().hide();//hide act bar
         setContentView(R.layout.activity_splash);
         initView();
+        YoYo.with(Techniques.RubberBand)
+                .duration(1400)
+                .repeat(20)
+                .playOn(findViewById(R.id.gold_miner));
 
         //timer
         Countdown();

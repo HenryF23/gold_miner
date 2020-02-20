@@ -9,4 +9,6 @@
     <string name="LinkTextview">TextView</string>
     <string name="by_henry_amp_nathan"><![CDATA[by Henry & Nathan]]></string>
     <string name="help_back">Back</string>
+    <string name="skip_welcome">skip</string>
+    <string name="gold_miner">Gold Miner</string>
 </resources>
