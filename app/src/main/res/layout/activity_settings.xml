@@ -51,6 +51,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
+        android:id="@+id/RadioGroupBoard"
         android:layout_width="180dp"
         android:layout_height="98dp"
         android:layout_marginStart="70dp"
@@ -81,6 +82,7 @@
 
 
     <RadioGroup
+        android:id="@+id/RadioGroupMines"
         android:layout_width="175dp"
         android:layout_height="123dp"
         android:layout_marginStart="277dp"

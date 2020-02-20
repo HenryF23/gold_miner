@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -28,5 +32,32 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        RadioGroup boardSize = (RadioGroup) findViewById(R.id.RadioGroupBoard);
+        RadioGroup numberMines = (RadioGroup) findViewById(R.id.RadioGroupMines);
+
+        boardSize.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            // https://www.twle.cn/l/yufei/android/android-basic-radiogroup.html
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radbtn = (RadioButton) findViewById(checkedId);
+                Toast.makeText(getApplicationContext(), "You select: " + radbtn.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        numberMines.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radbtn = (RadioButton) findViewById(checkedId);
+                Toast.makeText(getApplicationContext(), "You select: " + radbtn.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
     }
 }
