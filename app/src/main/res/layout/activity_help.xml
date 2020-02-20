@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/help_page3"
+    android:background="@drawable/help_page"
 
     tools:context=".HelpActivity">
 
     <TextView
         android:id="@+id/helpcontent"
-        android:layout_width="623dp"
-        android:layout_height="269dp"
+        android:layout_width="622dp"
+        android:layout_height="224dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="50dp"
@@ -29,7 +29,7 @@
         android:layout_height="41dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="120dp"
         android:text="@string/LinkTextview"
         android:textColor="#0B0B0B"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,11 +39,12 @@
 
     <Button
         android:id="@+id/helpBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="84dp"
+        android:layout_height="66dp"
         android:layout_marginStart="50dp"
         android:layout_marginBottom="16dp"
-        android:text="Back"
+        android:background="@drawable/back_button"
+        android:text="@string/help_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

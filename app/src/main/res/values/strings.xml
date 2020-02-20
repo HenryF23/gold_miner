@@ -7,4 +7,6 @@
     <string name="helpcontent">TextView</string>
     <string name="this_is_help_page">This is help page</string>
     <string name="LinkTextview">TextView</string>
+    <string name="by_henry_amp_nathan"><![CDATA[by Henry & Nathan]]></string>
+    <string name="help_back">Back</string>
 </resources>

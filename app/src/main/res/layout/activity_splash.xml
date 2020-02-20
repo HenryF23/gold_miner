@@ -11,8 +11,8 @@
 
     <Button
         android:id="@+id/skip_button"
-        android:layout_width="111dp"
-        android:layout_height="51dp"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
         android:layout_marginStart="597dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="23dp"
@@ -31,7 +31,7 @@
         android:layout_marginTop="370dp"
         android:layout_marginEnd="450dp"
         android:layout_marginBottom="22dp"
-        android:text="by Henry &amp; Nathan"
+        android:text="@string/by_henry_amp_nathan"
 
         android:textColor="#FBFAFA"
         app:layout_constraintBottom_toBottomOf="parent"

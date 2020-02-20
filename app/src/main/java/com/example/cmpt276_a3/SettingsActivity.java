@@ -33,15 +33,15 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        RadioGroup boardSize = (RadioGroup) findViewById(R.id.RadioGroupBoard);
-        RadioGroup numberMines = (RadioGroup) findViewById(R.id.RadioGroupMines);
+        RadioGroup boardSize = findViewById(R.id.RadioGroupBoard);
+        RadioGroup numberMines = findViewById(R.id.RadioGroupMines);
 
         boardSize.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
             // https://www.twle.cn/l/yufei/android/android-basic-radiogroup.html
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton radbtn = (RadioButton) findViewById(checkedId);
+                RadioButton radbtn = findViewById(checkedId);
                 Toast.makeText(getApplicationContext(), "You select: " + radbtn.getText(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -50,7 +50,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton radbtn = (RadioButton) findViewById(checkedId);
+                RadioButton radbtn = findViewById(checkedId);
                 Toast.makeText(getApplicationContext(), "You select: " + radbtn.getText(), Toast.LENGTH_SHORT).show();
             }
         });
