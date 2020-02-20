@@ -31,11 +31,20 @@ public class MainActivity extends AppCompatActivity {
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        ImageButton myButton = findViewById(R.id.helpImageButton);
-        myButton.setOnClickListener(new View.OnClickListener(){
+        ImageButton helpButton = findViewById(R.id.helpImageButton);
+        helpButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton settingsButton = findViewById(R.id.settingImageButton);
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });
