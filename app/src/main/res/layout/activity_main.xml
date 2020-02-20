@@ -8,45 +8,38 @@
     android:background="@drawable/welcome_page"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/startButton"
         android:layout_width="104dp"
         android:layout_height="55dp"
-        android:layout_marginStart="580dp"
-        android:text="@string/start"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/start_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
-        android:id="@+id/helpImageButton"
+    <Button
+        android:id="@+id/helpButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="340dp"
-        android:layout_marginEnd="476dp"
-        android:contentDescription="@string/help"
-        android:src="@drawable/help"
-        app:layout_constraintEnd_toStartOf="@+id/startButton"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/help_icon"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/settingImageButton"
+    <Button
+        android:id="@+id/settingsButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="341dp"
-        android:layout_marginEnd="439dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/action_settings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/startButton"
-        app:layout_constraintStart_toEndOf="@+id/helpImageButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/settings4" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/settings_icon"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!--    <Button-->

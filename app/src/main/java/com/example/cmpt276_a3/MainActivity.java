@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        ImageButton helpButton = findViewById(R.id.helpImageButton);
+        Button helpButton = findViewById(R.id.helpButton);
         helpButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton settingsButton = findViewById(R.id.settingImageButton);
+        Button settingsButton = findViewById(R.id.settingsButton);
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
