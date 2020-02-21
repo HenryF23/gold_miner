@@ -7,8 +7,14 @@
     <string name="helpcontent">TextView</string>
     <string name="this_is_help_page">This is help page</string>
     <string name="LinkTextview">TextView</string>
-    <string name="by_henry_amp_nathan"><![CDATA[by Henry & Nathan]]></string>
+    <string name="by_henry_amp_nathan"><![CDATA[By Henry & Nathan]]></string>
     <string name="help_back">Back</string>
     <string name="skip_welcome">skip</string>
     <string name="gold_miner">Gold Miner</string>
+    <string name="totalGamesPlayed">Total Games Played: %1$d</string>
+    <string name="minScanUsed">Minimum Scans Used: %1$d</string>
+    <string name="minScanUsedNotAvailable">Minimum of Scans Used: Not Available</string>
+    <string name="temp_textview">temp_TextView</string>
+    <string name="numMinesFound">Found %1$d of %2$d Mines</string>
+    <string name="scansUsed"># Scans Used: %1$d</string>
 </resources>
