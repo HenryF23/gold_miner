@@ -2,6 +2,8 @@ package com.example.cmpt276_a3;
 
 import android.os.Bundle;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,6 +20,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -48,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        YoYo.with(Techniques.Pulse)
+                .duration(1400)
+                .repeat(Animation.INFINITE)
+                .playOn(findViewById(R.id.startButton));
 
     }
 

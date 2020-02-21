@@ -94,7 +94,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        go = (Button) findViewById(R.id.skip_button);
+        go = findViewById(R.id.skip_button);
     }
 }
 
