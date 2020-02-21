@@ -32,6 +32,12 @@ import com.example.cmpt276_a3.cmpt276_a3_model.Score_Watcher;
     3AANd9GcSWNHz_vIAdCBDdEtuurSMy7w35iNFvgcLGs2RwNf1ZqwBiuSQE
  */
 
+
+/**
+ * Main game activity:
+ *      In charge of populate the buttons for main game play as well
+ * as showing information of remaining hidden mines, total mines and highest score.
+ */
 public class MainGamePlayActivity extends AppCompatActivity {
     private static int numRows;
     private static int numCols;
@@ -150,9 +156,14 @@ public class MainGamePlayActivity extends AppCompatActivity {
                         TableRow.LayoutParams.MATCH_PARENT,
                         1.0f));
                 button.setPadding(0, 0, 0, 0);
-                button.setTextSize(20);
-                button.setTypeface(null, Typeface.BOLD);
                 button.setTextColor(Color.WHITE);
+                button.setTypeface(null, Typeface.BOLD);
+
+                if(myMinesManager.isGold(row, col))
+                    button.setTextSize(20);
+                else
+                    button.setTextSize(20);
+
 
                 // Change button sound
                 button.setSoundEffectsEnabled(false);
@@ -191,6 +202,33 @@ public class MainGamePlayActivity extends AppCompatActivity {
                 congratulationsFragment.show(manager, "CongratulationsDialog");
             }
         }
+        else if(myMinesManager.isRevealed(tempRow, tempCol) && !myMinesManager.isScanned(tempRow, tempCol)){
+            myMinesManager.updateMine(tempRow, tempCol);
+            updateAllButtons();
+            updateTextViewInfo();
+        }
+    }
+
+    private void updateAllButtons(){
+        for(int i = 0; i < numRows; i++){
+            for(int j = 0; j < numCols ;j++){
+                if(myMinesManager.isRevealed(i, j)){
+                    Button button = buttons[i][j];
+
+                    if(myMinesManager.isGold(i, j)){
+                        lockButtonSizes();
+                        setDefaultImageToAllButtons(i, j, R.drawable.gold);
+
+                        if(myMinesManager.isScanned(i, j))
+                            button.setText("" + myMinesManager.getValue(i, j));
+                    }
+                    else{
+                        button.setBackgroundColor(Color.TRANSPARENT);
+                        button.setText("" + myMinesManager.getValue(i, j));
+                    }
+                }
+            }
+        }
     }
 
     private void updateSavedData() {
@@ -213,27 +251,7 @@ public class MainGamePlayActivity extends AppCompatActivity {
         score_watcher.saveScore(getApplicationContext());
     }
 
-    private void updateAllButtons(){
-        for(int i = 0; i < numRows; i++){
-            for(int j = 0; j < numCols ;j++){
-                if(myMinesManager.isRevealed(i, j)){
-                    Button button = buttons[i][j];
-
-                    if(myMinesManager.isGold(i, j)){
-                        lockButtonSizes();
-                        setDefaultImageToAllButtons(i, j, R.drawable.gold);
-                    }
-                    else{
-                        button.setBackgroundColor(Color.TRANSPARENT);
-                        button.setText("" + myMinesManager.getValueForNonGoldCell(i, j));
-                    }
-                }
-            }
-        }
-    }
-
     public static Intent makeIntentForMainGameActivity(Context context){
         return new Intent(context, MainGamePlayActivity.class);
     }
-
 }

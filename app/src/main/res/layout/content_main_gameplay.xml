@@ -66,4 +66,5 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/scanUsed_textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

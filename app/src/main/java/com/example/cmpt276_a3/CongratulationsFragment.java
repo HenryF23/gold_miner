@@ -11,6 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+/**
+ * This class is in charge of showing a congratulation dialog after the user has
+ * revealed all hidden mines.
+ */
 public class CongratulationsFragment extends AppCompatDialogFragment {
     @NonNull
     @Override

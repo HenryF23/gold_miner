@@ -3,6 +3,10 @@ package com.example.cmpt276_a3.cmpt276_a3_model;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+/**
+ * This class stores and get the game stats from files
+ * It will also save game status in the file so the data won't lost
+ */
 public class Score_Watcher {
     private static final Score_Watcher ourInstance = new Score_Watcher();
     private int maxScoreForGridRow4;
