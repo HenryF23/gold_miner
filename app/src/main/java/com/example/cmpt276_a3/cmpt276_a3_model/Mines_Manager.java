@@ -1,7 +1,5 @@
 package com.example.cmpt276_a3.cmpt276_a3_model;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.Random;
 
 public class Mines_Manager {
@@ -18,14 +16,9 @@ public class Mines_Manager {
     }
 
     public Mines_Manager(){
-//        row = 4;
-//        column = 6;
-//        numberOfMines = 6;
-//        numberOfScans = 0;
-
-        row = 2;
-        column = 2;
-        numberOfMines = 1;
+        row = 4;
+        column = 6;
+        numberOfMines = 6;
         numberOfScans = 0;
 
         numberOfMinesFound = 0;

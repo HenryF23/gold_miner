@@ -1,20 +1,17 @@
 package com.example.cmpt276_a3;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -38,6 +35,7 @@ import com.example.cmpt276_a3.cmpt276_a3_model.Mines_Manager;
 public class MainGamePlayActivity extends AppCompatActivity {
     private static int numRows;
     private static int numCols;
+    private boolean isWinned;
     Button buttons[][];
     Mines_Manager myMinesManager;
 
@@ -46,6 +44,7 @@ public class MainGamePlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_gameplay);
 
+        isWinned = false;
         myMinesManager = Mines_Manager.getInstance();
         numRows = myMinesManager.getRow();
         numCols = myMinesManager.getColumn();
@@ -107,6 +106,7 @@ public class MainGamePlayActivity extends AppCompatActivity {
             tableLayout.addView(tableRow);
 
             for(int col = 0; col < numCols; col++){
+                final MediaPlayer mediaPlayer;
                 final int FINAL_ROW = row;
                 final int FINAL_COL = col;
 
@@ -116,18 +116,22 @@ public class MainGamePlayActivity extends AppCompatActivity {
                         TableRow.LayoutParams.MATCH_PARENT,
                         1.0f));
                 button.setPadding(0, 0, 0, 0);
+                button.setTextSize(20);
+                button.setTypeface(null, Typeface.BOLD);
+                button.setTextColor(Color.WHITE);
 
+                // Change button sound
+                button.setSoundEffectsEnabled(false);
                 if(myMinesManager.isGold(row, col)){
-                    button.setSoundEffectsEnabled(false);
+                    mediaPlayer = MediaPlayer.create(this, R.raw.gold_sound);
                 }
-                final MediaPlayer mediaPlayer = MediaPlayer.
-                        create(this, R.raw.gold_sound);
+                else
+                    mediaPlayer = MediaPlayer.create(this, R.raw.find_none_mine_sound);
 
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (myMinesManager.isGold(FINAL_ROW, FINAL_COL))
-                            mediaPlayer.start();
+                        mediaPlayer.start();
                         gridButtonClicked(FINAL_ROW, FINAL_COL);
                     }
                 });
@@ -141,13 +145,14 @@ public class MainGamePlayActivity extends AppCompatActivity {
     }
 
     private void gridButtonClicked(int tempRow, int tempCol){
-        // myMinesManager.updateMine(tempRow, tempCol);
         if(!myMinesManager.isRevealed(tempRow, tempCol)){
             myMinesManager.updateMine(tempRow, tempCol);
             updateAllButtons();
             updateTextViewInfo();
 
-            if(myMinesManager.getNumberOfMinesFound() == myMinesManager.getNumberOfMines()){
+            if(myMinesManager.getNumberOfMinesFound() == myMinesManager.getNumberOfMines()
+                    && !isWinned){
+                isWinned = true;
                 FragmentManager manager = getSupportFragmentManager();
                 CongratulationsFragment congratulationsFragment = new CongratulationsFragment();
                 congratulationsFragment.show(manager, "CongratulationsDialog");
@@ -162,8 +167,6 @@ public class MainGamePlayActivity extends AppCompatActivity {
                     Button button = buttons[i][j];
 
                     if(myMinesManager.isGold(i, j)){
-//                        button.setBackgroundColor(Color.TRANSPARENT);
-//                        button.setText("Mines Found!");
                         lockButtonSizes();
                         setDefaultImageToAllButtons(i, j, R.drawable.gold);
                     }
