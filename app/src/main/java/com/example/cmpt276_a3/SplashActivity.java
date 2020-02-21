@@ -1,5 +1,7 @@
 package com.example.cmpt276_a3;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.WindowManager;
@@ -7,16 +9,21 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
 
-// adapted: https://blog.csdn.net/qq_19681347/article/details/81738350
+//https://blog.csdn.net/qq_19681347/article/details/81738350
 public class SplashActivity extends AppCompatActivity {
 
     private Button go;
     private int i;
     private Timer timer;
+    @SuppressLint("HandlerLeak")
     private Handler handler = new Handler(){
         public void handleMessage(Message msg){
             switch(msg.what){
@@ -44,6 +51,10 @@ public class SplashActivity extends AppCompatActivity {
         getSupportActionBar().hide();//hide act bar
         setContentView(R.layout.activity_splash);
         initView();
+        YoYo.with(Techniques.RubberBand)
+                .duration(1400)
+                .repeat(20)
+                .playOn(findViewById(R.id.gold_miner));
 
         //timer
         Countdown();
@@ -83,7 +94,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        go = (Button) findViewById(R.id.skip_button);
+        go = findViewById(R.id.skip_button);
     }
 }
 

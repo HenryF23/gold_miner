@@ -2,4 +2,13 @@
     <string name="app_name">CMPT276_A3</string>
     <string name="action_settings">Settings</string>
     <string name="skip">Skip</string>
+    <string name="help">help</string>
+    <string name="start">Start</string>
+    <string name="helpcontent">TextView</string>
+    <string name="this_is_help_page">This is help page</string>
+    <string name="LinkTextview">TextView</string>
+    <string name="by_henry_amp_nathan"><![CDATA[by Henry & Nathan]]></string>
+    <string name="help_back">Back</string>
+    <string name="skip_welcome">skip</string>
+    <string name="gold_miner">Gold Miner</string>
 </resources>

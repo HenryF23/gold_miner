@@ -5,56 +5,54 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/welcome_page">
+    android:background="@drawable/start_page"
+    tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_main"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/startButton"
         android:layout_width="104dp"
         android:layout_height="55dp"
-        android:layout_marginStart="588dp"
-        android:text="Start"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/start_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/helpButton"
-        android:layout_width="53dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="508dp"
-        android:layout_marginBottom="53dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/startButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/help_icon"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/settings_icon"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!--    <Button-->
-<!--        android:id="@+id/start"-->
-<!--        android:layout_width="105dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginStart="584dp"-->
-<!--        android:background="@drawable/button_rounde"-->
-<!--        android:text="Start"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.954" /> &lt;!&ndash;套用XML&ndash;&gt;-->
+    <!--        android:id="@+id/start"-->
+    <!--        android:layout_width="105dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="584dp"-->
+    <!--        android:background="@drawable/button_rounde"-->
+    <!--        android:text="Start"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.954" /> &lt;!&ndash;套用XML&ndash;&gt;-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
