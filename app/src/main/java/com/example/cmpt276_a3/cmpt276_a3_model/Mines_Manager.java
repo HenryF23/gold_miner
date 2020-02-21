@@ -15,7 +15,7 @@ public class Mines_Manager {
         return ourInstance;
     }
 
-    public Mines_Manager(){
+    private Mines_Manager(){
         row = 4;
         column = 6;
         numberOfMines = 6;
