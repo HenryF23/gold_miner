@@ -43,7 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
         RadioGroup numberMines = findViewById(R.id.RadioGroupMines);
 
         boardSize.check(R.id.radioButton4x6);
-        numberMines.check(R.id.rb_1);
+        numberMines.check(R.id.mines6);
 
 
         Button settingsBackButton = findViewById(R.id.SettingsBackButton);
@@ -134,16 +134,16 @@ public class SettingsActivity extends AppCompatActivity {
 //
         switch(NumberMines) {
             case 10:
-                numberMines.check(R.id.rb_2);
+                numberMines.check(R.id.mines10);
                 break;
             case 15:
-                numberMines.check(R.id.rb_3);
+                numberMines.check(R.id.mines15);
                 break;
             case 20:
-                numberMines.check(R.id.rb_4);
+                numberMines.check(R.id.mines20);
                 break;
             case 6:
-                numberMines.check(R.id.rb_1);
+                numberMines.check(R.id.mines6);
                 break;
         }
         settingsSaveButton.setOnClickListener(new View.OnClickListener(){
