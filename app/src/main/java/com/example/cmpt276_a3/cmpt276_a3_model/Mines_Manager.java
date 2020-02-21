@@ -18,15 +18,15 @@ public class Mines_Manager {
     }
 
     public Mines_Manager(){
-//        row = 4;
-//        column = 6;
-//        numberOfMines = 6;
-//        numberOfScans = 0;
-
-        row = 2;
-        column = 2;
-        numberOfMines = 1;
+        row = 4;
+        column = 6;
+        numberOfMines = 6;
         numberOfScans = 0;
+
+//        row = 2;
+//        column = 2;
+//        numberOfMines = 1;
+//        numberOfScans = 0;
 
         numberOfMinesFound = 0;
     }
