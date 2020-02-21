@@ -11,8 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".HelpActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize"></activity>
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation|keyboard|screenSize"/>
         <activity
             android:name=".SplashActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|screenSize"
