@@ -49,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
                 .repeat(Animation.INFINITE)
                 .playOn(findViewById(R.id.startButton));
 
+        YoYo.with(Techniques.Pulse)
+                .duration(1350)
+                .repeat(Animation.INFINITE)
+                .playOn(findViewById(R.id.helpButton));
+
+        YoYo.with(Techniques.Pulse)
+                .duration(1350)
+                .repeat(Animation.INFINITE)
+                .playOn(findViewById(R.id.settingsButton));
+
         YoYo.with(Techniques.ZoomIn)
                 .duration(1400)
                 .repeat(0)

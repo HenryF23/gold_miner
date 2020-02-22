@@ -85,13 +85,13 @@ public class MainGamePlayActivity extends AppCompatActivity {
         textView = findViewById(R.id.minScanUsed_textView);
         switch (myMinesManager.getRow()){
             case 4:
-                tempScore = score_watcher.getMaxScoreForGridRow4();
+                tempScore = score_watcher.getMaxScore(0, scoreMinesToNumConverter(myMinesManager.getNumberOfMines()));
                 break;
             case 5:
-                tempScore = score_watcher.getMaxScoreForGridRow5();
+                tempScore = score_watcher.getMaxScore(1, scoreMinesToNumConverter(myMinesManager.getNumberOfMines()));
                 break;
             case 6:
-                tempScore = score_watcher.getMaxScoreForGridRow6();
+                tempScore = score_watcher.getMaxScore(2, scoreMinesToNumConverter(myMinesManager.getNumberOfMines()));
                 break;
             default:
                  tempScore = Integer.MAX_VALUE;
@@ -236,21 +236,36 @@ public class MainGamePlayActivity extends AppCompatActivity {
     private void updateSavedData() {
         switch (myMinesManager.getRow()){
             case 4:
-                if(score_watcher.getMaxScoreForGridRow4() > myMinesManager.getNumberOfScans())
-                    score_watcher.setMaxScoreForGridRow4(myMinesManager.getNumberOfScans());
+                if(score_watcher.getMaxScore(0, scoreMinesToNumConverter(myMinesManager.getNumberOfMines())) > myMinesManager.getNumberOfScans())
+                    score_watcher.setMaxScore(0, scoreMinesToNumConverter(myMinesManager.getNumberOfMines()), myMinesManager.getNumberOfScans());
                 break;
             case 5:
-                if(score_watcher.getMaxScoreForGridRow5() > myMinesManager.getNumberOfScans())
-                    score_watcher.setMaxScoreForGridRow5(myMinesManager.getNumberOfScans());
+                if(score_watcher.getMaxScore(1, scoreMinesToNumConverter(myMinesManager.getNumberOfMines())) > myMinesManager.getNumberOfScans())
+                    score_watcher.setMaxScore(1, scoreMinesToNumConverter(myMinesManager.getNumberOfMines()), myMinesManager.getNumberOfScans());
                 break;
             case 6:
-                if(score_watcher.getMaxScoreForGridRow6() > myMinesManager.getNumberOfScans())
-                    score_watcher.setMaxScoreForGridRow6(myMinesManager.getNumberOfScans());
+                if(score_watcher.getMaxScore(2, scoreMinesToNumConverter(myMinesManager.getNumberOfMines())) > myMinesManager.getNumberOfScans())
+                    score_watcher.setMaxScore(2, scoreMinesToNumConverter(myMinesManager.getNumberOfMines()), myMinesManager.getNumberOfScans());
                 break;
         }
 
         score_watcher.incNumGamesPlayed();
         score_watcher.saveScore(getApplicationContext());
+    }
+
+    private int scoreMinesToNumConverter(int numMines){
+        switch (numMines){
+            case 6:
+                return 0;
+            case 10:
+                return 1;
+            case 15:
+                return 2;
+            case 20:
+                return 3;
+            default:
+                return -1;
+        }
     }
 
     public static Intent makeIntentForMainGameActivity(Context context){
