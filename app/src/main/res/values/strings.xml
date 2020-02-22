@@ -29,4 +29,5 @@
     <string name="mines20">20 mines</string>
     <string name="settings_save">Save</string>
     <string name="settings_back">back</string>
+    <string name="reset_record">Reset Record</string>
 </resources>
