@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.WindowManager;
 
 import android.text.Html;
-import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,7 +17,7 @@ This class is about the game's help interface, including game introduction and p
 */
 public class HelpActivity extends AppCompatActivity {
 
-    private TextView HyperLink;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +35,32 @@ public class HelpActivity extends AppCompatActivity {
             }
         });
 
-        HyperLink = (TextView) findViewById(R.id.LinkTextView);
+//        HyperLink1 = findViewById(R.id.LinkTextView1);
+//
+//        Spanned courseText = Html.fromHtml("Click on this link to visit course Website <br />" +
+//                "<a href='http://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt276/home'>Course Website</a>");
+//
+//        HyperLink1.setMovementMethod(LinkMovementMethod.getInstance());
+//        HyperLink1.setText(courseText);
+//
+//
+//
+//        HyperLink2 = findViewById(R.id.LinkTextView2);
+//        Spanned lostText = Html.fromHtml("Click on this link to visit course Website <br />" +
+//                "<a href='http://www.google.com'>谷歌</a>");
+//        HyperLink2.setMovementMethod(LinkMovementMethod.getInstance());
+//        HyperLink2.setText(lostText);
 
-        Spanned Text = Html.fromHtml("Click on this link to visit course Website <br />" +
-                "<a href='http://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt276/home'>Course Website</a>");
 
-        HyperLink.setMovementMethod(LinkMovementMethod.getInstance());
-        HyperLink.setText(Text);
+        TextView textView = findViewById(R.id.gameInfo_Textview);
+        textView.setText(Html.fromHtml(getString(R.string.gameDescription)));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+        TextView textView2 = findViewById(R.id.Ref_TextView);
+        textView2.setText(Html.fromHtml(getString(R.string.referenceTextBox)));
+        textView2.setMovementMethod(LinkMovementMethod.getInstance());
+
 
 
     }

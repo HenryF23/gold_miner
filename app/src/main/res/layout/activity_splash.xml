@@ -11,10 +11,10 @@
 
     <Button
         android:id="@+id/skip_button"
-        android:layout_width="88dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="1dp"
         android:backgroundTint="#FFC107"
         android:text="@string/skip_welcome"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,28 +24,24 @@
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="370dp"
-        android:layout_marginEnd="450dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="14dp"
         android:text="@string/by_henry_amp_nathan"
 
         android:textColor="#FBFAFA"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/skip_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/gold_miner"
-        android:layout_width="433dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="500dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="108dp"
         android:fontFamily="@font/frijole"
         android:text="@string/gold_miner"
         android:textColor="#FFC107"
-        android:textSize="52sp"
+        android:textSize="58sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

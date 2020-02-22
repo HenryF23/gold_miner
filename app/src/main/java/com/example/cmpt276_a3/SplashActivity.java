@@ -59,6 +59,11 @@ public class SplashActivity extends AppCompatActivity {
                 .repeat(20)
                 .playOn(findViewById(R.id.gold_miner));
 
+        YoYo.with(Techniques.RubberBand)
+                .duration(1400)
+                .repeat(20)
+                .playOn(findViewById(R.id.gold_miner));
+
         //timer
         Countdown();
 
@@ -80,7 +85,7 @@ public class SplashActivity extends AppCompatActivity {
     private void Countdown() {
 
         //set the time
-        i = 10;
+        i = 5;
 
         //set timer
         timer = new Timer();

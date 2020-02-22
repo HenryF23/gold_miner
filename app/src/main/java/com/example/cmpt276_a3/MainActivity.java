@@ -45,9 +45,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         YoYo.with(Techniques.Pulse)
-                .duration(1400)
+                .duration(1350)
                 .repeat(Animation.INFINITE)
                 .playOn(findViewById(R.id.startButton));
+
+        YoYo.with(Techniques.ZoomIn)
+                .duration(1400)
+                .repeat(0)
+                .playOn(findViewById(R.id.gold_miner));
 
         setupStartGameActivityButton();
 
