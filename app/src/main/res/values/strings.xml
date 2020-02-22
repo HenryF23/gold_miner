@@ -30,4 +30,6 @@
     <string name="settings_save">Save</string>
     <string name="settings_back">back</string>
     <string name="reset_record">Reset Record</string>
+    <string name="clear_history">Game History Cleared</string>
+    <string name="gameStatusSaved">Game Status Saved</string>
 </resources>

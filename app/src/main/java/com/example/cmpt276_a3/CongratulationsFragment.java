@@ -40,6 +40,7 @@ public class CongratulationsFragment extends AppCompatDialogFragment {
                 .setView(view)
                 .setPositiveButton(android.R.string.ok, listener)
                 .setNeutralButton(android.R.string.cancel, listener)
+                .setCancelable(false)
                 .create();
     }
 }
