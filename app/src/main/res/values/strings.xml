@@ -33,66 +33,62 @@
     <string name="clear_history">Game History Cleared</string>
     <string name="gameStatusSaved">Game Status Saved</string>
     <string name="gameDescription"><![CDATA[
- <p><span style="font-size: 30px; font-family: Arial, Helvetica, sans-serif;"><strong>How to play:</strong></span></p>
-<p>1. Press the "Settings" button on the bottom right and chose the mine size and number of gold in the mine</p>
-<p>2. Press the "Start" button to start a new game</p>
-<p>3. Press anywhere on the mine to check if there is a mine in there. If there is no mine, it will pop up a number shows the number of "Hidden Gold" on the same row and the same column. The number of scans will be incremented by 1. If there is gold, the number of scans will not be incremented, but you can tap the gold again to scan the "hidden gold"</p>
-<p>4. Your GOAL is to find all the golds use the minimum number of scans</p>
-<p>5. The number of games you played and the highest score (minimum scans) will be recorded, and you can clear the history in the "Settings" page as well.</p>
-
+        <p><span style="font-size: 30px; font-family: Arial, Helvetica, sans-serif;"><strong>How to play:</strong></span></p>
+        <p>1. Press the "Settings" button on the bottom right and chose the mine size and number of gold in the mine</p>
+        <p>2. Press the "Start" button to start a new game</p>
+        <p>3. Press anywhere on the mine to check if there is a mine in there. If there is no mine, it will pop up a number shows the number of "Hidden Gold" on the same row and the same column. The number of scans will be incremented by 1. If there is gold, the number of scans will not be incremented, but you can tap the gold again to scan the "hidden gold"</p>
+        <p>4. Your GOAL is to find all the golds use the minimum number of scans</p>
+        <p>5. The number of games you played and the highest score (minimum scans) will be recorded, and you can clear the history in the "Settings" page as well.</p>
     ]]></string>
-
-
     <string name="referenceTextBox"><![CDATA[
-    <p style="margin: 0px; font-stretch: normal; font-size: 13px; line-height: 1; font-family: &quot;Helvetica Neue&quot;;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size: 30px;"><strong>Resource Link:</strong></span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="http://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt276/home">Course Website</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="https://miro.medium.com/max/730/1*BlZ-OpQtLiKL0mhERfYnJQ.png">Main Background</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="https://static.coindesk.com/wp-content/uploads/2017/11/BTG-1-710x458.jpg">Game Board Background</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="https://miro.medium.com/max/9440/1*VUHuJ-9kQFGRoxEXsJtVVg.jpeg">Welcome Background</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="https://bkso.baidu.com/pic/黄金矿工中文版/9082695/0/aa64034f78f0f736fc1ae3f20055b319eac41358?fr=lemma&amp;ct=single#aid=0&amp;pic=aa64034f78f0f736fc1ae3f20055b319eac41358">Settings Background</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="http://www.yisell.com/sound/znhhc85E4qg=.html">Shovel Sound</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="http://www.aigei.com/s?q=黄金&amp;type=sound">Golden Sound</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="https://www.flaticon.com/free-icon/settings_1293875">Settings Icon</a>
-    </span></span></p>
-<p style="line-height: 1;"><span style="font-family:
-        Arial, Helvetica, sans-serif;"><span style="font-size:
-      12px;">
-      <a href="https://github.com/daimajia/AndroidViewAnimations">Android View Animations</a>
-    </span></span></p>
-
+        <p><span style="font-size: 30px; font-family: Arial, Helvetica, sans-serif;"><strong>Authors</strong></span></p>
+        <p>Henry Fang, Nathan Li</p>
+        <a href="http://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt276/home">About the Author</a>
+            </span></span></p>
+        <p style="margin: 0px; font-stretch: normal; font-size: 13px; line-height: 1; font-family: &quot;Helvetica Neue&quot;;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size: 30px;"><strong>Resource Link:</strong></span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="https://miro.medium.com/max/730/1*BlZ-OpQtLiKL0mhERfYnJQ.png">Main Background</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="https://static.coindesk.com/wp-content/uploads/2017/11/BTG-1-710x458.jpg">Game Board Background</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="https://miro.medium.com/max/9440/1*VUHuJ-9kQFGRoxEXsJtVVg.jpeg">Welcome Background</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="https://bkso.baidu.com/pic/黄金矿工中文版/9082695/0/aa64034f78f0f736fc1ae3f20055b319eac41358?fr=lemma&amp;ct=single#aid=0&amp;pic=aa64034f78f0f736fc1ae3f20055b319eac41358">Settings Background</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="http://www.yisell.com/sound/znhhc85E4qg=.html">Shovel Sound</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="http://www.aigei.com/s?q=黄金&amp;type=sound">Golden Sound</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="https://www.flaticon.com/free-icon/settings_1293875">Settings Icon</a>
+            </span></span></p>
+        <p style="line-height: 1;"><span style="font-family:
+                Arial, Helvetica, sans-serif;"><span style="font-size:
+              12px;">
+              <a href="https://github.com/daimajia/AndroidViewAnimations">Android View Animations</a>
+            </span></span></p>
     ]]></string>
-
-
 </resources>
