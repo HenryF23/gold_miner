@@ -1,20 +1,17 @@
 package com.example.cmpt276_a3;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.cmpt276_a3.cmpt276_a3_model.Mines_Manager;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Type;
+import com.example.cmpt276_a3.cmpt276_a3_model.Mines_Manager;
+import com.example.cmpt276_a3.cmpt276_a3_model.Score_Watcher;
 /*
 Game design interface,
 in this interface you can set the size of the board and the amount of gold.
@@ -23,6 +20,7 @@ And you can clear the history of playing.
 
 public class SettingsActivity extends AppCompatActivity {
     Mines_Manager mines_manager;
+    Score_Watcher score_watcher;
 
     int NumberRow = 4;
     int NumberCol = 6;
@@ -36,6 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().hide();//hide act bar
         setContentView(R.layout.activity_settings);
 
+        score_watcher = Score_Watcher.getInstance();
         mines_manager = Mines_Manager.getInstance();
         NumberRow = mines_manager.getRow();
         NumberCol = mines_manager.getColumn();
@@ -49,6 +48,7 @@ public class SettingsActivity extends AppCompatActivity {
         boardSize.check(R.id.radioButton4x6);
         numberMines.check(R.id.mines6);
 
+        setUpResetButton();
 
         Button settingsBackButton = findViewById(R.id.SettingsBackButton);
         settingsBackButton.setOnClickListener(new View.OnClickListener(){
@@ -154,11 +154,27 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mines_manager.setMineProperties(NumberRow, NumberCol, NumberMines);
+                Toast.makeText(getApplicationContext(),
+                        getResources().getString(R.string.gameStatusSaved),
+                        Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
+    }
 
+    private void setUpResetButton() {
+        Button button = findViewById(R.id.ResetButton);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score_watcher.resetAllValues();
+                score_watcher.saveScore(getApplicationContext());
 
+                Toast.makeText(getApplicationContext(),
+                        getResources().getString(R.string.clear_history),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
