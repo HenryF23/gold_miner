@@ -99,19 +99,19 @@ public class SettingsActivity extends AppCompatActivity {
 //                String ai = a.replaceAll("\\D+","");
 //                System.out.println(ai);
 
-                if (a.equals("6 mines")){
+                if (a.equals("6 Gold")){
                     NumberMines = 6;
                 }
-                else if(a.equals("10 mines")){
-                    System.out.println("yes its 10");
+                else if(a.equals("10 Gold")){
+//                    System.out.println("yes its 10");
                     NumberMines = 10;
                 }
-                else if (a.equals("15 mines")){
-                    System.out.println("yes its 15");
+                else if (a.equals("15 Gold")){
+//                    System.out.println("yes its 15");
 
                     NumberMines = 15;
                 }
-                else if (a.equals("20 mines")){
+                else if (a.equals("20 Gold")){
                     NumberMines = 20;
                 }
 

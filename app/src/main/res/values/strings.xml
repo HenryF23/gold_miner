@@ -23,10 +23,10 @@
     <string name="board4x6">4 rows 6 columns</string>
     <string name="board5x10">5 rows 10 columns</string>
     <string name="board6x15">6 rows 15 columns</string>
-    <string name="mines6">6 gold</string>
-    <string name="mines10">10 gold</string>
-    <string name="mines15">15 gold</string>
-    <string name="mines20">20 gold</string>
+    <string name="mines6">6 Gold</string>
+    <string name="mines10">10 Gold</string>
+    <string name="mines15">15 Gold</string>
+    <string name="mines20">20 Gold</string>
     <string name="settings_save">Save</string>
     <string name="settings_back">back</string>
     <string name="reset_record">Reset Record</string>
