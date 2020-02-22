@@ -1,9 +1,12 @@
 package com.example.cmpt276_a3.cmpt276_a3_model;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.Random;
 
+/**
+ * A manager class that create the mines based on the rows and columns
+ * User can use getters and setters to set and get number of rows, columns,
+ * mines found.
+ */
 public class Mines_Manager {
     private static final Mines_Manager ourInstance = new Mines_Manager();
     private int row;
@@ -17,16 +20,11 @@ public class Mines_Manager {
         return ourInstance;
     }
 
-    public Mines_Manager(){
+    private Mines_Manager(){
         row = 4;
         column = 6;
         numberOfMines = 6;
         numberOfScans = 0;
-
-//        row = 2;
-//        column = 2;
-//        numberOfMines = 1;
-//        numberOfScans = 0;
 
         numberOfMinesFound = 0;
     }
@@ -91,8 +89,8 @@ public class Mines_Manager {
             randomMines = random.nextInt(row * column);
             randomRow = randomMines / column;
             randomCol = randomMines % column;
-            if(myMines[randomRow][randomCol].value != -1){
-                myMines[randomRow][randomCol].value = -1;
+            if(!myMines[randomRow][randomCol].isGold){
+                myMines[randomRow][randomCol].isGold = true;
                 tempMinesCount--;
             }
         }
@@ -108,48 +106,54 @@ public class Mines_Manager {
             for(int j = 0; j < column; j++){
                 count = 0;
 
-                if(myMines[i][j].value != -1){
-                    // Check mines for the corresponding row
-                    for(int temp = 0; temp < row; temp++){
-                        if (myMines[temp][j].value == -1 && !myMines[temp][j].revealed)
-                            count++;
-                    }
-
-                    // Check mines for the corresponding column
-                    for(int temp = 0; temp < column; temp++){
-                        if (myMines[i][temp].value == -1 && !myMines[i][temp].revealed)
-                            count++;
-                    }
-
-                    myMines[i][j].value = count;
+                // Check mines for the corresponding row
+                for(int temp = 0; temp < row; temp++){
+                    if (myMines[temp][j].isGold && !myMines[temp][j].revealed)
+                        count++;
                 }
+
+                // Check mines for the corresponding column
+                for(int temp = 0; temp < column; temp++){
+                    if (myMines[i][temp].isGold&& !myMines[i][temp].revealed)
+                        count++;
+                }
+
+                myMines[i][j].value = count;
             }
         }
     }
 
     public boolean isGold(int userRow, int userColumn){
-        if(myMines[userRow][userColumn].value == -1)
-            return true;
-        return false;
+        return myMines[userRow][userColumn].isGold;
     }
 
     public boolean isRevealed(int userRow, int userColumn){
-        if(myMines[userRow][userColumn].revealed)
-            return true;
-        return false;
+        return myMines[userRow][userColumn].revealed;
     }
 
-    public int getValueForNonGoldCell(int userRow, int userColumn){
+    public boolean isScanned(int userRow, int userColumn){
+        return myMines[userRow][userColumn].isScanned;
+    }
+
+    public int getValue(int userRow, int userColumn){
         return myMines[userRow][userColumn].value;
     }
 
     public void updateMine(int userRow, int userColumn){
-        if(isGold(userRow, userColumn))
-            numberOfMinesFound++;
+        if(!myMines[userRow][userColumn].revealed){
+            myMines[userRow][userColumn].revealed = true;
 
-        myMines[userRow][userColumn].revealed = true;
+            if(myMines[userRow][userColumn].isGold)
+                numberOfMinesFound++;
+            else
+                numberOfScans++;
+        }
+        else if(isGold(userRow, userColumn) && !myMines[userRow][userColumn].isScanned){
+            myMines[userRow][userColumn].isScanned = true;
+            numberOfScans++;
+        }
+
         scanMines();
-        numberOfScans++;
     }
 
     // Print 2D array for debug purpose

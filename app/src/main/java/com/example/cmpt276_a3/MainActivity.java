@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.example.cmpt276_a3.cmpt276_a3_model.Score_Watcher;
 
 /*
 The main navigation interface of the game,
@@ -24,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);//hide state bar
         setContentView(R.layout.activity_main);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
         Button helpButton = findViewById(R.id.helpButton);
         helpButton.setOnClickListener(new View.OnClickListener(){
@@ -44,13 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         YoYo.with(Techniques.Pulse)
                 .duration(1400)
                 .repeat(Animation.INFINITE)
                 .playOn(findViewById(R.id.startButton));
 
-
         setupStartGameActivityButton();
+
+
     }
 
     private void setupStartGameActivityButton() {
