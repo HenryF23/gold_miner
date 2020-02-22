@@ -15,7 +15,10 @@ import com.daimajia.androidanimations.library.YoYo;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
+/*
+The game's welcome interface, including welcome animations, as well as authors.
+This interface can be skipped manually.
+*/
 
 //https://blog.csdn.net/qq_19681347/article/details/81738350
 public class SplashActivity extends AppCompatActivity {

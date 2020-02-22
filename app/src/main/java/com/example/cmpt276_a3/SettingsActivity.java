@@ -15,7 +15,11 @@ import android.widget.Toast;
 import com.example.cmpt276_a3.cmpt276_a3_model.Mines_Manager;
 
 import java.lang.reflect.Type;
-
+/*
+Game design interface,
+in this interface you can set the size of the board and the amount of gold.
+And you can clear the history of playing.
+*/
 
 public class SettingsActivity extends AppCompatActivity {
     Mines_Manager mines_manager;

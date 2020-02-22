@@ -13,6 +13,9 @@ import android.text.method.LinkMovementMethod;
 import android.widget.Button;
 import android.widget.TextView;
 
+/*
+This class is about the game's help interface, including game introduction and production staff, and resource sources.
+*/
 public class HelpActivity extends AppCompatActivity {
 
     private TextView HyperLink;

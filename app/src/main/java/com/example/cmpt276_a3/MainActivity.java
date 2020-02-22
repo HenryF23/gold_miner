@@ -12,7 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-
+/*
+The main navigation interface of the game,
+through which you can enter the interface for finding gold,
+and jump to the help interface and settings interface.
+*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
