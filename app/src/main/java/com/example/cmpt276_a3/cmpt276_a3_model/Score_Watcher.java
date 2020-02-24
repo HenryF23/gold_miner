@@ -16,36 +16,6 @@ public class Score_Watcher {
     private final int row = 3;
     private final int column = 4;
     private int scores[][];
-//    private int maxScoreForGridRow4Gold6;
-//    private int maxScoreForGridRow4Gold10;
-//    private int maxScoreForGridRow4Gold15;
-//    private int maxScoreForGridRow4Gold20;
-//    private int maxScoreForGridRow5Gold6;
-//    private int maxScoreForGridRow5Gold10;
-//    private int maxScoreForGridRow5Gold15;
-//    private int maxScoreForGridRow5Gold20;
-//    private int maxScoreForGridRow6Gold6;
-//    private int maxScoreForGridRow6Gold10;
-//    private int maxScoreForGridRow6Gold15;
-//    private int maxScoreForGridRow6Gold20;
-
-//    private final String MAX_SCORE_FOR_GRID_4 = "maxScoreForGrid4";
-//    private final String MAX_SCORE_FOR_GRID_5 = "maxScoreForGrid5";
-//    private final String MAX_SCORE_FOR_GRID_6 = "maxScoreForGrid6";
-//
-//
-//    private final String maxScoreForGridRow4Gold6 = "maxScoreForGridRow4Gold6";
-//    private final String maxScoreForGridRow4Gold10 = "maxScoreForGridRow4Gold10";
-//    private final String maxScoreForGridRow4Gold15 = "maxScoreForGridRow4Gold15";
-//    private final String maxScoreForGridRow4Gold20 = ;
-//    private final String maxScoreForGridRow5Gold6 = ;
-//    private final String maxScoreForGridRow5Gold10 = ;
-//    private final String maxScoreForGridRow5Gold15 = ;
-//    private final String maxScoreForGridRow5Gold20 = ;
-//    private final String maxScoreForGridRow6Gold6 = ;
-//    private final String maxScoreForGridRow6Gold10 = ;
-//    private final String maxScoreForGridRow6Gold15 = ;
-//    private final String maxScoreForGridRow6Gold20 = ;
 
     public static Score_Watcher getInstance(){
         return ourInstance;
